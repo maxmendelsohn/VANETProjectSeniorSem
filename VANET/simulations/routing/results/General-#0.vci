@@ -1,0 +1,91 @@
+file 5202 1650847151                                            
+version 2
+run General-0-20220424-17:38:35-43236
+attr configname General
+attr datetime 20220424-17:38:35
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network RoutingScenario
+attr processid 43236
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.node[*].numApps 1
+param *.node[*].app[0].typename "\"UdpBasicApp\""
+param *.node[*].app[0].destAddresses "\"node[*]\""
+param *.node[*].app[0].destPort 5000
+param *.node[*].app[0].messageLength 1000B
+param *.node[*].app[0].sendInterval exponential(12ms)
+param *.node[*].app[0].packetName "\"UDPData\""
+param *.node[*].wlan[0].opMode "\"p\""
+param *.node[*].wlan[0].radio.bandName "\"5.9 GHz\""
+param *.node[*].wlan[0].radio.channelNumber 3
+param *.node[*].wlan[0].radio.transmitter.power 20mW
+param *.node[*].wlan[0].radio.bandwidth "10 MHz"
+param *.node[*].ipv4.configurator.typename "\"HostAutoConfigurator\""
+param *.node[*].ipv4.configurator.interfaces "\"wlan0\""
+param *.node[*].ipv4.configurator.mcastGroups "\"224.0.0.1\""
+param *.node[*].mobility.typename "\"VeinsInetMobility\""
+param *.manager.updateInterval 0.1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"square.launchd.xml\")"
+param *.manager.moduleType "\"vanet.veins_inet.VeinsInetRoutingCar\""
+param **.router "\"Aodv\""
+
+vector 0 RoutingScenario.node[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 RoutingScenario.node[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 RoutingScenario.node[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 3 RoutingScenario.node[0].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 4 RoutingScenario.node[0].app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 5 RoutingScenario.node[0].udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 6 RoutingScenario.node[0].lo[0].lo rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 7 RoutingScenario.node[0].lo[0].lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 8 RoutingScenario.node[0].udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 9 RoutingScenario.node[0].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), vector(count)"
+0	3301 30 2 2 0.1 0.1 3 0 2 2 4
+1	3331 10 2 2 0.1 0.1 1 3 3 3 9
+2	3341 10 2 2 0.1 0.1 1 1 1 1 1
+3	3351 11 2 2 0.1 0.1 1 15 15 15 225
+4	3362 312 5 79 0.1 0.271769486854 13 1000 1000 13000 13000000
+5	3674 312 7 80 0.1 0.271769486854 13 1008 1008 13104 13208832
+6	3986 312 9 82 0.1 0.271769486854 13 1028 1028 13364 13738192
+7	4298 312 9 82 0.1 0.271769486854 13 1028 1028 13364 13738192
+8	4610 313 11 84 0.1 0.271769486854 13 1008 1008 13104 13208832
+9	4923 278 11 84 0.1 0.271769486854 13 1 13 91 819
+

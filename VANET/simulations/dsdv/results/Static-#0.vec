@@ -1,0 +1,575 @@
+version 2
+run Static-0-20220411-18:39:28-74907
+attr configname Static
+attr datetime 20220411-18:39:28
+attr experiment Static
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network DSDVNetwork
+attr processid 74907
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].wlan[*].radio.transmitter.communicationRange 250m
+param *.host[0].app[0].destAddr "\"host[1](ipv4)\""
+param **.wlan[*].typename "\"AckingWirelessInterface\""
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.headerLength 23B
+param **.wlan[*].radio.typename "\"UnitDiskRadio\""
+param **.wlan[*].radio.transmitter.headerLength 96b
+param **.wlan[*].radio.transmitter.communicationRange 250m
+param **.wlan[*].radio.transmitter.interferenceRange 0m
+param **.wlan[*].radio.transmitter.detectionRange 0m
+param **.wlan[*].radio.receiver.ignoreInterference true
+param *.numHosts 20
+param **.host[*].mobility.typename "\"StationaryMobility\""
+param **.mobility.constraintAreaMinZ 0m
+param **.mobility.constraintAreaMaxZ 0m
+param **.mobility.constraintAreaMinX 0m
+param **.mobility.constraintAreaMinY 0m
+param **.mobility.constraintAreaMaxX 600m
+param **.mobility.constraintAreaMaxY 600m
+param *.host[0].numApps 1
+param *.host[0].app[0].typename "\"PingApp\""
+param *.host[0].app[0].startTime uniform(1s,5s)
+param *.host[0].app[0].printPing true
+param **.wlan[*].bitrate 2Mbps
+param **.hasStatus true
+
+vector 0 DSDVNetwork.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 DSDVNetwork.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 DSDVNetwork.host[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 DSDVNetwork.host[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 DSDVNetwork.host[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 DSDVNetwork.host[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 DSDVNetwork.host[6].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 DSDVNetwork.host[7].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 DSDVNetwork.host[8].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 DSDVNetwork.host[9].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 10 DSDVNetwork.host[10].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 DSDVNetwork.host[11].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 12 DSDVNetwork.host[12].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 DSDVNetwork.host[13].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 14 DSDVNetwork.host[14].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 15 DSDVNetwork.host[15].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 16 DSDVNetwork.host[16].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 DSDVNetwork.host[17].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 18 DSDVNetwork.host[18].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 19 DSDVNetwork.host[19].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 20 DSDVNetwork.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 21 DSDVNetwork.host[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 22 DSDVNetwork.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 23 DSDVNetwork.host[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 24 DSDVNetwork.host[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 25 DSDVNetwork.host[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 26 DSDVNetwork.host[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 27 DSDVNetwork.host[3].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 28 DSDVNetwork.host[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 29 DSDVNetwork.host[4].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 30 DSDVNetwork.host[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 31 DSDVNetwork.host[5].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 32 DSDVNetwork.host[6].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 33 DSDVNetwork.host[6].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 34 DSDVNetwork.host[7].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 35 DSDVNetwork.host[7].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 36 DSDVNetwork.host[8].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 37 DSDVNetwork.host[8].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 38 DSDVNetwork.host[9].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 39 DSDVNetwork.host[9].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 40 DSDVNetwork.host[10].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 41 DSDVNetwork.host[10].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 42 DSDVNetwork.host[11].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 43 DSDVNetwork.host[11].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 44 DSDVNetwork.host[12].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 45 DSDVNetwork.host[12].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 46 DSDVNetwork.host[13].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 47 DSDVNetwork.host[13].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 48 DSDVNetwork.host[14].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 49 DSDVNetwork.host[14].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 50 DSDVNetwork.host[15].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 51 DSDVNetwork.host[15].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 52 DSDVNetwork.host[16].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 53 DSDVNetwork.host[16].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 54 DSDVNetwork.host[17].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 55 DSDVNetwork.host[17].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 56 DSDVNetwork.host[18].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 57 DSDVNetwork.host[18].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 58 DSDVNetwork.host[19].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 59 DSDVNetwork.host[19].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 60 DSDVNetwork.host[14].wlan[0].mac rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 61 DSDVNetwork.host[14].wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 62 DSDVNetwork.host[14].wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 63 DSDVNetwork.host[14].wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 64 DSDVNetwork.host[14].wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 65 DSDVNetwork.host[14].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 66 DSDVNetwork.host[1].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 67 DSDVNetwork.host[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 68 DSDVNetwork.host[4].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 69 DSDVNetwork.host[4].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 70 DSDVNetwork.host[7].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 71 DSDVNetwork.host[7].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 72 DSDVNetwork.host[6].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 73 DSDVNetwork.host[6].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 74 DSDVNetwork.host[17].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 75 DSDVNetwork.host[17].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 76 DSDVNetwork.host[16].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 77 DSDVNetwork.host[16].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 78 DSDVNetwork.host[6].wlan[0].mac rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 79 DSDVNetwork.host[6].wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 80 DSDVNetwork.host[6].wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 81 DSDVNetwork.host[6].wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 82 DSDVNetwork.host[6].wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 83 DSDVNetwork.host[6].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 84 DSDVNetwork.host[14].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 85 DSDVNetwork.host[14].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 86 DSDVNetwork.host[10].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 87 DSDVNetwork.host[10].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 88 DSDVNetwork.host[15].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 89 DSDVNetwork.host[15].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+0	0	0	0
+0	0	0	0
+0	0	0	4
+1	0	0	0
+1	0	0	0
+1	0	0	4
+2	0	0	0
+2	0	0	0
+2	0	0	4
+3	0	0	0
+3	0	0	0
+3	0	0	4
+4	0	0	0
+4	0	0	0
+4	0	0	4
+5	0	0	0
+5	0	0	0
+5	0	0	4
+6	0	0	0
+6	0	0	0
+6	0	0	4
+7	0	0	0
+7	0	0	0
+7	0	0	4
+8	0	0	0
+8	0	0	0
+8	0	0	4
+9	0	0	0
+9	0	0	0
+9	0	0	4
+10	0	0	0
+10	0	0	0
+10	0	0	4
+11	0	0	0
+11	0	0	0
+11	0	0	4
+12	0	0	0
+12	0	0	0
+12	0	0	4
+13	0	0	0
+13	0	0	0
+13	0	0	4
+14	0	0	0
+14	0	0	0
+14	0	0	4
+15	0	0	0
+15	0	0	0
+15	0	0	4
+16	0	0	0
+16	0	0	0
+16	0	0	4
+17	0	0	0
+17	0	0	0
+17	0	0	4
+18	0	0	0
+18	0	0	0
+18	0	0	4
+19	0	0	0
+19	0	0	0
+19	0	0	4
+20	0	0	1
+21	0	0	1
+22	0	0	1
+22	5	0.056713059088	3
+22	25	0.056997059088	1
+22	72	0.23699826532	3
+22	110	0.23728226532	1
+23	0	0	1
+24	0	0	1
+25	0	0	1
+26	0	0	1
+27	0	0	1
+28	0	0	1
+28	6	0.056713243445	3
+28	29	0.056997243445	1
+28	67	0.236997922216	3
+28	90	0.237281922216	1
+29	0	0	1
+30	0	0	1
+31	0	0	1
+32	0	0	1
+32	8	0.056713578921	3
+32	37	0.056997578921	1
+33	0	0	1
+33	65	0.236997578921	2
+33	85	0.237281578921	1
+34	0	0	1
+34	7	0.05671331531	3
+34	33	0.05699731531	1
+34	66	0.236997885214	3
+34	86	0.237281885214	1
+35	0	0	1
+36	0	0	1
+37	0	0	1
+38	0	0	1
+39	0	0	1
+40	0	0	1
+40	71	0.236998258555	3
+40	106	0.237282258555	1
+41	0	0	1
+42	0	0	1
+43	0	0	1
+44	0	0	1
+45	0	0	1
+46	0	0	1
+47	0	0	1
+48	0	0	1
+48	70	0.236998182116	3
+48	102	0.237282182116	1
+49	0	0	1
+49	4	0.056712975726	2
+49	24	0.056996975726	1
+50	0	0	1
+50	73	0.23699836485	3
+50	114	0.23728236485	1
+51	0	0	1
+52	0	0	1
+52	10	0.056713739419	3
+52	45	0.056997739419	1
+52	69	0.236998102467	3
+52	98	0.237282102467	1
+53	0	0	1
+54	0	0	1
+54	9	0.05671369796	3
+54	41	0.05699769796	1
+54	68	0.236997960933	3
+54	94	0.237281960933	1
+55	0	0	1
+56	0	0	1
+57	0	0	1
+58	0	0	1
+59	0	0	1
+60	3	0.056712975726	36
+61	3	0.056712975726	36
+62	3	0.056712975726	1
+62	3	0.056712975726	0
+63	3	0.056712975726	36
+64	3	0.056712975726	0
+65	3	0.056712975726	59
+66	26	0.056997059088	59
+66	111	0.23728226532	59
+67	26	0.056997059088	36
+67	111	0.23728226532	36
+68	30	0.056997243445	59
+68	91	0.237281922216	59
+69	30	0.056997243445	36
+69	91	0.237281922216	36
+70	34	0.05699731531	59
+70	87	0.237281885214	59
+71	34	0.05699731531	36
+71	87	0.237281885214	36
+72	38	0.056997578921	59
+73	38	0.056997578921	36
+74	42	0.05699769796	59
+74	95	0.237281960933	59
+75	42	0.05699769796	36
+75	95	0.237281960933	36
+76	46	0.056997739419	59
+76	99	0.237282102467	59
+77	46	0.056997739419	36
+77	99	0.237282102467	36
+78	64	0.236997578921	36
+79	64	0.236997578921	36
+80	64	0.236997578921	1
+80	64	0.236997578921	0
+81	64	0.236997578921	36
+82	64	0.236997578921	0
+83	64	0.236997578921	59
+84	103	0.237282182116	59
+85	103	0.237282182116	36
+86	107	0.237282258555	59
+87	107	0.237282258555	36
+88	115	0.23728236485	59
+89	115	0.23728236485	36
+
