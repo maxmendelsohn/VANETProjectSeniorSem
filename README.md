@@ -44,7 +44,7 @@ See OMNeT documentation for more.
 
 ## Authors
 
-Max Mendelsohn, Jabed Miah, and Daniel Buccisano
+Jabed Miah, Max Mendelsohn, and Daniel Buccisano
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
