@@ -42,6 +42,12 @@ act as routers
 See OMNeT documentation for more.
 
 
+## Sample Files
+
+Under the simulation folder, most recent implementation can be found in routing_custom folder.
+This implementation uses veins-inet, our desired routing protocols, as well as a network with
+randomly determined trips.
+
 ## Authors
 
 Jabed Miah, Max Mendelsohn, and Daniel Buccisano
